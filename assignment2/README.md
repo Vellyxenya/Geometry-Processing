@@ -1,29 +1,6 @@
 # Assignment 2
-Name: 'Noureddine Gueddach'
 
-Legi-Nr: '18-804-880'
-
-## Required results
-Edit this 'README.md' file to report all your results. You only need to update the tables in the reports section by adding screenshots and reporting results.
-
-### Tasks
-1) Show the visualization of the constrained points for the 'cat.off' point cloud.
-
-2) Show screenshots of the grid with nodes colored according to their implicit function values (cat.off and luigi.off).
-
-3) Show screenshots of the reconstructed surfaces. Experiment with different parameter settings: grid resolution (also anisotropic in the 3 axes), Wendland function radius, polynomial degree. Add all these settings to the GUI to ease experimentation. Briefly summarize your observations and save the reconstructed models in the .off format for every point-cloud dataset provided (assignment2/results).
-
-4) Theory question (1): Save your notes to assignment2/results and link to them from within the report.
-
-5) Theory question (2): Save your notes to assignment2/results and link to them from within the report.
-
-6) Show screenshots comparing the 'hound.off' computed with normal-based reconstruction to the point-based reconstruction of the previous task.
-
-7) Compare your MLS reconstruction results to the surfaces obtained with RIMLS and Screened Poisson Reconstruction, and inspect the differences. Report your findings.
-
-8) Show screenshorts of your method for estimating normals based on Principal Component Analysis. Compare the results with the reconstruction obtained using the provided normals.
-
-## Reports
+## Report
 ### 1 - Visualization of the 'cat.off' point cloud with constrained points
 | model name  | view 01             | view 02            |
 | :---------: | ------------------- | ------------------ |
@@ -36,7 +13,6 @@ Edit this 'README.md' file to report all your results. You only need to update t
 | luigi      |<img align="center" src="./res/2luigi1.png" width="300">| <img align="center"  src="./res/2luigi2.png" width="300"> |
 
 ### 3 - Reconstructed surfaces
-**Please also save the reconstructed shape (.off) in the results folder**
 
 | sphere                                                     | cat                                                           |
 | :--------------------------------------------------------: |  :----------------------------------------------------------: | 
@@ -46,18 +22,11 @@ Edit this 'README.md' file to report all your results. You only need to update t
 | hound                                                      |                                                               |
 |<img align="center" src="./res/3hound_poly1_wend005_res50.png" width="300">|                                                               |
 
-
-**Please summarize your observations of what happens when you change the following parameters. Please feel free to add screenshots (by creating a separate table) to illustrate your explanation.**
-
 | params                   | Your Observation    | 
 | :---------------------:  | ------------------- |
 | grid resolution          |   As one might expect, increasing the resolution increases computation time as we evalute the implicit function at more points, but also highly increases the level of detail. For some shapes like 'hound' or 'horse', it is beneficial to use anisotropic resolution as some the meshes are much longer in some dimensions than others. We can also notice that increasing the resolution too much increases the artificats around the mesh (which could in principle easily be removed using a largest connected component approach) |
 | Wendland function radius |   Increasing the wendland radius yields much smoother reconstructions and takes significantly more time (as the neighborhood is larger for each point). It also helps getting rid of unwanted artifacts. Decreasing the radius gives coarser reconstructions and is much faster. |
 | polynomial degree        |   Increasing the polynomial degree seems to overall give smoother curvature without removing the local details, at the cost of a bit longer computational time as well as a huge amount of artifacts around the mesh (but at a 'safe' distance, this distance being the wendland radius). Again, these can easily be removed using a connected components approach. |
-
-**Please compare the computation time for constraints computation and MLS using brute force and a spatial index. Use hound.off for the comparison and use the same parameters for the timings with and without use of spatial index (please report the parameters that you used).**
-
-**Parameters used : resolution=50x40x20, wendland radius=0.05, polynomial degree=1.**
 
 **Times are reported in microseconds:**
 | step                    | brute force         |  spatial index      |
@@ -74,18 +43,18 @@ We see that the spatial index greatly increases performance. The change is not s
 | wendland radius  |<img align="center" src="./res/custom_hound_low_wendland.png" width="300">| <img align="center"  src="./res/custom_hound_high_wendland.png" width="300"> |
 | polynomial degree |<img align="center" src="./res/custom_hound_low_poly.png" width="300">| <img align="center"  src="./res/custom_hound_high_poly.png" width="300"> |
 
-### 4 - Theory Question 1
+### 4 - Theory 1
 
-**Prove that the normal of a surface defined by an implicit function is proportional to its gradient.**
+**Proof that the normal of a surface defined by an implicit function is proportional to its gradient.**
 
-The proof can be found in [Question 1](./docs/question1.pdf)
+[Question 1](./docs/question1.pdf)
 
 
-### 5 - Theory Question 2
+### 5 - Theory 2
 
-**Compute the closed-form gradient of the MLS approximation.**
+**Gradient of the MLS approximation.**
 
-The proof can be found in [Question 2](./docs/question2.pdf)
+[Question 2](./docs/question2.pdf)
 
 
 ### 6 - Normal-based v.s. point-based reconstruction ("hound.off")
@@ -96,7 +65,7 @@ The proof can be found in [Question 2](./docs/question2.pdf)
 
 ### 7 - MLS v.s. Screened Poisson Reconstruction v.s. RIMLS
 
-**No implementation required, you can use [Meshlab](https://www.meshlab.net) to perform the comparisons.**
+**Comparison with [Meshlab](https://www.meshlab.net).**
 
 | model names  | MLS          | Possion             | RIMLS               | 
 | :---------:  | :---------:  | :-----------------: | :-----------------: |
