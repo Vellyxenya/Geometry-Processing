@@ -1,1 +1,3 @@
-# Various Geometry Processing algorithms
+# Various Geometry Processing Algorithms
+
+## C++, IGL
