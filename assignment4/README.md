@@ -1,21 +1,7 @@
 # Assignment 4
 
-Name: 'Gueddach Noureddine'
-
-Legi-Nr: '18-804-880'
-
-## Required results
-Edit this 'README.md' file to report all your results. You only need to update the tables in the reports section by adding screenshots and reporting results.
-
-### Mandatory Tasks
-
-1) Screenshots of the parameterizations and textured (checkerboard) models for all the implemented methods and boundary conditions (models: cathead.obj, hemisphere.off, hemisphere_non_convex_boundary.off, Octo_cut2.obj)
-
-2) Several examples of the distortion visualizations.
-
-
 ## Reports
-### (mandatory-1) parameterization and checkerboard texture models
+### Pparameterization and checkerboard texture models
 #### *cathead*
 | Method            | checkerboard textured models          |         Parameterization             |
 | :--------------:  | ------------------------------------- |------------------------------------- |
@@ -57,7 +43,7 @@ Edit this 'README.md' file to report all your results. You only need to update t
 | ARAP (free)       |<img align="center" src="./res/octo/arap_mesh_free.png" width="300">| <img align="center"  src="./res/octo/arap_param_free.png" width="300"> |
 
 
-### (mandatory-2) distortion visualization
+### distortion visualization
 #### *cathead*
 | mtd \ metric      | Conformal (angle) |    Authalic (area)  |  Isometric  (length)    |
 | :--------------:  | ----------------- | ------------------- | ----------------------- |
