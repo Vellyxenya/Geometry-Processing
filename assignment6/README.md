@@ -1,34 +1,6 @@
 # Assignment 6: Skinning & Skeletal Animation
 
-Name: 'Noureddine Gueddach'
-
-Legi-Nr: '18-804-880'
-
-
-## Required results
-Edit this 'README.md' file to report all your results. Use the ```/res``` folder to store your results.
-
-### Tasks
-
-1. Read Sec. 1 carefully to get familar with the data format, problem formulation, and mathematical background.
-2. (Task 2) two theoretical discussions 
-3. (Task 3) visualize the animation of the input skeleton of the hand shape from two types of rotations (rotation matrices and quaternions)
-4. (Task 4) compute harmonic skinning weights on selected handles
-5. (Task 5) per-vertex LBS + rotation/translation + Lerp
-6. (Task 6) per-vertex LBS + dual quaternion + Nlerp
-7. (Task 7) per-face LBS + quaternion + Slerp + Poisson Stitching
-8. (Task 8.1) context-aware per-vertex LBS
-9. (optional Task 8.2) context-aware per-face LBS
- 
-### Important Note
-1. We do not provide template code for this assignment - feel free to use previous template code if you want
-2. You can use any libigl functions (and other open-source code, but please add a reference in this case)
-3. You are allowed to use your previous code (for example, you will find the Poisson Stitching technqiue quite similar to Deformation Transfer that you have implemented in Assignment 5; and also the provided handle selection in A5 might inspire you to design your handle selection tool in Task 4).
-4. You are allowed to modify this report freely (but please try to stick to some table format of organizing figures to avoid a 20-page long report)
-5. Please feel free to try other skeletal animation/deformation data you can find online if you find the provided animation is not cool enough (for example [here](https://www.mixamo.com/#/), but note that they might be in different data format than the provide ones).
-6. Please try to keep your code clean and self-explained (with necessary comments), since we will grade this assignment based on your code as well (~~please don't feel upset when you get bad animations, you can always blame our poor data preparation~~).
-
-## Reports
+## Report
 
 ### Task 2: Rotation Representation discussion
 #### Task 2.1. compare different rotation representations
