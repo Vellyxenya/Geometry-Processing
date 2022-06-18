@@ -1,23 +1,6 @@
 # Assignment 1
-Name: Gueddach Noureddine
 
-Legi-Nr: 18-804-880
-
-
-## Required results
-Edit this 'README.md' file to report all your results. You only need to update the tables in the reports section by adding screenshots and reporting results.
-
-### Tasks
-- Add a text dump of the content of the two data structures for the provided mesh “plane.off”.
-
-- Show three screenshots of the 'fandisk.off' model using 'per-face shading', 'per-vertex shading' and 'per-corner shading'. Describe the difference between them.
-
-- Show screenshots of the provided meshes with each connected component colored differently. Show the number of connected components and the size of each component (measured in number of faces) for all the provided models.
-
-- Show screenshots of the subdivided meshes.
-
-
-## Reports
+## Report
 ### text dump of the data structure for "plane.off"
 |Vertices-to-Face                  | Vertices-to-Vertex                 |
 | :------------------------------- |:---------------------------------- |
@@ -48,27 +31,14 @@ Edit this 'README.md' file to report all your results. You only need to update t
 | faces for v24: 13 14 15 28 29 30 | vertices for v24: 4 5 9 12 19 20   |
 
 
-
- 
- 
- 
-
-
- 
- 
- 
-
-
-### Show three screenshots of the 'fandisk.off' model using different shading. Make sure you disable the wireframe and that the screenshots clearly show the differences between the different shading types.
 | model name  | per-face shading    | per-vertex shading |  per-corner shading |
 | :---------: | ------------------- | ------------------ | ------------------- |
 | fandisk     |<img align="center" src="./res/fandisk3.png" width="300">| <img align="center"  src="./res/fandisk4.png" width="300"> |<img align="center"  src="./res/fandisk5.png" width="300">  |
 
-#### Briefly describe the difference between the different shading types.
 The face shading does not give any smoothness illusion and the underling mesh faces are well visible. On the opposite end, per-vertex shading smoothes out everything, even sharp corner that shouldn't be smoothed, making the corners look really off, with some artifacts sometimes.
 per-corner shading takes the best of both worlds, smoothing everything but corners that are above a certain threshold, giving nice visuals. The used threshold was 30°.
 
-### Assign different colors to each connected component
+### Different colors to each connected component
 | model name   | your results                                             |  no. of components | no. of faces per component |
 | :----------: | -------------------------------------------------------  |:-----------------: | :------------------------: |
 |bumpy_cube    |<img align="center"  src="./res/bumpy6.png" width="300">  |   1                |  2496                      |
@@ -78,7 +48,7 @@ per-corner shading takes the best of both worlds, smoothing everything but corne
 
 
 
-### Screenshots of subdivided meshes. Make sure you enable the wireframe overlay.
+### Screenshots of subdivided meshes.
 
 | model name | original shape                                           | subdivided shape                                         |
 | :--------: | -------------------------------------------------------- |--------------------------------------------------------- | 
